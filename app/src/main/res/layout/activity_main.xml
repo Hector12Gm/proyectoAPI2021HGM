@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="442dp"
+        android:layout_height="231dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toTopOf="@+id/edtUsername"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/tv_bievenida"
+        android:textColor="@color/primaryTextColor"
+
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:hint="@string/edt_hint_nombre"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMensaje" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/edt_hint_contrasenia"
+        android:password="true"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+
+    <TextView
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/tam_txt_registro"
+        android:id="@+id/tvRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <TextView
+        android:textSize="@dimen/tam_txt_registro"
+        android:textColor="@color/purple_500"
+        android:id="@+id/tvRegistroClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_registro_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toEndOf="@+id/tvRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <Button
+        android:onClick="clickLogin"
+        android:textColor="@color/primaryTextColor"
+        android:background="@drawable/btn_main"
+        android:id="@+id/btnInciar"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/tv_bievenida"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro" />
+    <RelativeLayout
+        android:id="@+id/loadingScreen"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:background="@color/secondaryColor"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:indeterminate="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoAPI</string>
+    <string name="tv_bievenida">Iniciar sesión</string>
+    <string name="edt_hint_nombre">Nombre de usuario</string>
+    <string name="edt_hint_contrasenia">Contraseña</string>
+    <string name="edt_hint_contrasenia_confirmar">Confirmar contraseña</string>
+    <string name="tv_registro">¿No te has registrado?</string>
+    <string name="tv_registro_click">Haz click aqui</string>
+    <string name="tv_registro_msj">Registro del usuario</string>
+    <string name="hint_correo">Correo@dominio.com</string>
+    <string name="hint_telefono">Telefono</string>
+</resources>

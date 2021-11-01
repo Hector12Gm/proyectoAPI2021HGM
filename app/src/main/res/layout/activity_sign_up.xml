@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+<RelativeLayout
+    android:id="@+id/loadingPantall"
+    android:visibility="gone"
+    android:elevation="10dp"
+    android:gravity="center"
+    android:background="@color/secondaryColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ProgressBar
+    android:indeterminate="true"
+    android:layout_width="300dp"
+    android:layout_height="300dp"/>
+
+</RelativeLayout>
+    <Button
+        android:onClick="click_SignUp"
+        android:id="@+id/btnSign"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/btn_main"
+        android:text="Registrarme :)"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignTelefono" />
+
+    <androidx.appcompat.widget.Toolbar
+            android:theme="@style/Theme.ProyectoAPI"
+            android:id="@+id/myToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/tv_registro_msj"
+                    android:textSize="25sp"
+                    android:textColor="@color/secondaryTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintHorizontal_bias="0.161"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+
+        android:id="@+id/edtSignName"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/edt_hint_nombre"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar" />
+
+
+    <EditText
+        android:id="@+id/edtSignPassword1"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/edt_hint_contrasenia"
+        android:password="true"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSignName" />
+
+    <EditText
+        android:id="@+id/edtSignPassword2"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/edt_hint_contrasenia_confirmar"
+        android:password="true"
+        android:textSize="@dimen/tam_edt_txt"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSignPassword1" />
+
+    <EditText
+
+        android:id="@+id/edtSignCorreo"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:hint="@string/hint_correo"
+        android:textSize="@dimen/tam_edt_txt"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignPassword2" />
+
+    <EditText
+
+        android:id="@+id/edtSignTelefono"
+        android:layout_width="@dimen/tam_edt"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:hint="@string/hint_telefono"
+        android:textSize="@dimen/tam_edt_txt"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignCorreo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

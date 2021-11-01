@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tam_edt">300dp</dimen>
+    <dimen name="tam_edt_txt">20sp</dimen>
+    <dimen name="tam_txt_registro">15sp</dimen>
+    <dimen name="tv_grande">30sp</dimen>
+</resources>
